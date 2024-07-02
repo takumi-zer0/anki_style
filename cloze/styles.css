@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://raw.githubusercontent.com/takumi-zer0/anki_style/main/styles.css");
+
+:root {
+  --heading-1: #4586db;
+  --heading-2: #e47ee4;
+  --heading-3: #ffffff;
+  --heading-4: #74b6ca;
+  --inline-code: #e7882e;
+  --link-col: #aad7d9;
+  --anki: #a2c579;
+  --strong-col: #ff90bc;
+}
+
+* {
+  line-height: 2.5rem;
+}
+
+/* Cloze (Hide All) */
+cloze2_w {
+  display: inline-block;
+  width: 5em;
+  height: 1.2rem;
+  background: white;
+  line-height: 1.3rem !important;
+}
+cloze2 {
+  display: none;
+}
+
+.cloze cloze2_w {
+  display: none;
+}
+
+.cloze cloze2 {
+  display: inline;
+  line-height: 1.3rem !important;
+}
+/* Cloze until here */
+
+.card {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background: url("https://images.unsplash.com/photo-1714886772771-c5b602e9e553?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+#answer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.front,
+.back {
+  max-height: 85vh;
+  overflow-y: scroll;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #31363f;
+  border-radius: 8px;
+  padding: 15px 15px;
+  max-width: 800px;
+  min-width: 300px;
+}
+
+pre {
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #363636 !important;
+  font-family: "Source Code Pro" !important;
+  color: #eeeeee;
+  white-space: break-spaces;
+  line-height: 1.5rem;
+}
+
+a {
+  color: #0d6efd;
+  margin-right: 10px;
+}
+
+.front .cloze {
+  padding: 2px 10px;
+  line-height: 1.3rem !important;
+  border-radius: 8px;
+  background-color: #e7882e;
+  font-weight: bold;
+  color: #e7882e;
+}
+.front .nightMode .cloze {
+  color: #e7882e;
+  background-color: #e7882e;
+}
+
+.back .cloze {
+  padding: 2px 10px;
+  line-height: 1.3rem !important;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #e7882e;
+}
+.back .nightMode .cloze {
+  color: #e7882e;
+  background-color: #e7882e;
+}
+
+th,
+td {
+  padding: 4px;
+}
+
+h1 {
+  color: var(--heading-1) !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 10px !important;
+}
+
+:not(.cm-active) > h1 {
+  display: block;
+  padding-bottom: 10px !important;
+  border-bottom: 3px solid var(--heading-1) !important;
+}
+
+:not(.cm-active) > h1::before {
+  content: "◎ " !important;
+  color: var(--heading-1) !important;
+}

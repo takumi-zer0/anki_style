@@ -1,0 +1,49 @@
+<!-- # 24402e41168547b6 -->
+<style>cloze2_w {
+    display: inline-block;
+    width: 5em;
+    height: 1em;
+    background-color: #ffeba2;
+  }/** Css styling of visible cloze on the back */
+  
+  cloze2 {
+    display: none;
+  }
+  
+  .cloze cloze2_w {
+    display: none;
+  }
+  
+  .cloze cloze2 {
+    display: inline;
+  }
+  </style>
+  <!-- / 24402e41168547b6 --!>
+  
+  <div class="front">
+  {{cloze:Text}}
+  </div>
+  
+  <script>
+  /* --- DO NOT DELETE OR EDIT THIS SCRIPT (1f91af7729e984b8) --- */
+  var onShownHook
+  
+  (function () {
+    function scrollToCloze () {
+      const element = document.getElementsByClassName('cloze')[0]
+      const elementRect = element.getBoundingClientRect()
+      const absoluteElementTop = elementRect.top + window.pageYOffset
+      const middle = absoluteElementTop - (window.innerHeight / 2)
+      window.scrollTo(0, middle)
+    }
+    if (typeof onShownHook !== 'undefined') {
+      // for Anki 2.1.x
+      onShownHook.push(scrollToCloze)
+    } else {
+      // for AnkiDroid
+      setTimeout(scrollToCloze, 10)
+    }
+  })()
+  
+  /* --- DO NOT DELETE OR EDIT THIS SCRIPT (1f91af7729e984b8) --- */
+  </script>
